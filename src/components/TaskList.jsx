@@ -31,12 +31,12 @@ const TaskList = () => {
           filteredTasks.map((task) => (
             <div
               key={task.id}
-              className="p-4 bg-gray-700 rounded-lg shadow-md flex justify-between items-center transform hover:scale-105 transition-transform duration-300"
+              className="p-4 bg-gray-700 rounded-lg shadow-md flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 transform hover:scale-105 transition-transform duration-300"
             >
-              <p className="text-lg text-white">{task.text}</p>
+              <p className="text-lg text-white text-center sm:text-left">{task.text}</p>
               <button
                 onClick={() => dispatch(deleteTask(task.id))}
-                className="px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-colors transform hover:scale-110 duration-300"
+                className="w-full sm:w-auto px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-colors transform hover:scale-110 duration-300"
               >
                 Delete
               </button>

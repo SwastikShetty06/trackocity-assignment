@@ -45,9 +45,9 @@ const GitHubPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 md:p-8 max-w-2xl">
-      <div className="bg-gray-800 p-8 rounded-2xl shadow-2xl">
-        <h1 className="text-4xl font-bold text-center mb-8 text-white">GitHub User Search</h1>
+    <div className="container mx-auto p-4 sm:p-6 md:p-8 max-w-2xl">
+      <div className="bg-gray-800 p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-white">GitHub Search</h1>
         
         {/* Search Input and Button */}
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
@@ -79,13 +79,13 @@ const GitHubPage = () => {
               <img
                 src={userData.avatar_url}
                 alt={`${userData.login}'s avatar`}
-                className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-400 shadow-lg"
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 border-4 border-purple-400 shadow-lg"
               />
-              <h2 className="text-3xl font-bold text-white">{userData.name || userData.login}</h2>
-              <p className="text-gray-400 mb-4 text-lg">@{userData.login}</p>
-              <p className="text-gray-300 mb-4">{userData.bio || 'No bio available.'}</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">{userData.name || userData.login}</h2>
+              <p className="text-gray-400 mb-4 text-base sm:text-lg">@{userData.login}</p>
+              <p className="text-gray-300 mb-4 px-4">{userData.bio || 'No bio available.'}</p>
               
-              <div className="flex flex-wrap justify-center gap-6 text-md text-gray-400">
+              <div className="flex flex-wrap justify-center gap-4 text-sm sm:text-md text-gray-400">
                 {userData.location && (
                   <span className="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>

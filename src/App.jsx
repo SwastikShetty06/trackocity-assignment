@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-white text-black">
+      <div className="min-h-screen flex flex-col gradient-bg-body text-white">
         <Navbar />
         <main className="flex-grow container mx-auto p-4 pb-20">
           <Routes>
